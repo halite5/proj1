@@ -32,12 +32,22 @@ nav > a.active {
 
 .image-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 16px 16px;
     grid-template-areas: ". ." ". ." ". ." ". .";
 }
 
-.image-grid-item > img {
+.media-grid-item > img, .media-grid-item >video {
     width: 100%;
 }
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . ."
+      ". . .";
+  }
