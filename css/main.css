@@ -1,0 +1,43 @@
+body {
+    background-color: #e9e8dc;
+    color: #42373d;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+}
+
+nav {
+    margin: 32px 0;
+}
+
+nav > a {
+    padding: 8px;
+    background-color: #e1d1b4;
+    margin: 0 2px;
+}
+
+nav > a.active {
+    background-color: #b7adaa;
+}
+
+.form {
+    display: block;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 16px 16px;
+    grid-template-areas: ". ." ". ." ". ." ". .";
+}
+
+.image-grid-item > img {
+    width: 100%;
+}
