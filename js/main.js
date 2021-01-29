@@ -74,3 +74,28 @@ function on_scroll() {
     }
 }
 document.addEventListener("scroll", on_scroll)
+
+function validate_email(eml) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(eml);
+}
+
+var js_form = $('#js-form');
+if (js_form) {
+    js_form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        if (js_form.classList.contains("email-form")) {
+            console.log('email form was submitted', e);
+
+            var email = $("#test-email").value;
+
+            var status = validate_email(email);
+            console.log('validate: ', status, 'for', email)
+
+            var msg = status ? "email successfully recorded" : "invalid email address";
+
+            $("#validation-status").innerText = msg;
+        }
+    })
+}
