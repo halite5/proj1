@@ -59,3 +59,18 @@ overlay.onclick = function (e) {
     close_img_overlay();
     close_vid_overlay();
 }
+
+var btt = $('aside.btt');
+function on_scroll() {
+    var root = document.documentElement;
+    var maxScroll = root.scrollHeight - root.clientHeight;
+
+    var scroll = root.scrollTop;
+
+    if (scroll / maxScroll > 0.25) {
+        btt.classList.remove('gone');
+    } else {
+        btt.classList.add('gone');
+    }
+}
+document.addEventListener("scroll", on_scroll)
