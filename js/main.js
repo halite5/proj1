@@ -9,22 +9,30 @@ const $a = document.querySelectorAll.bind(document);
 var overlay = $('#overlay');
 
 function open_img_overlay(img) {
-    $('#overlay-img').src = img.src;
+    var ov = $('#overlay-img');
+    if (!ov) return;
+    ov.src = img.src;
     overlay.classList.remove('gone');
 }
 
 function close_img_overlay() {
-    $('#overlay-img').src = '';
+    var ov = $('#overlay-img');
+    if (!ov) return;
+    ov.src = '';
     overlay.classList.add('gone');
 }
 
 function open_vid_overlay(vid) {
-    $('#overlay-vid').src = vid.src;
+    var ov = $('#overlay-vid');
+    if (!ov) return;
+    ov.src = vid.src;
     overlay.classList.remove('gone');
 }
 
 function close_vid_overlay() {
-    $('#overlay-vid').src = '';
+    var ov = $('#overlay-vid');
+    if (!ov) return;
+    ov.src = '';
     overlay.classList.add('gone');
 }
 
